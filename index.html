@@ -76,6 +76,11 @@ const theChart = new Chart(Population_Chart, {
     }
   }
 });
+function updateChart(years,population,chart) {
+	theChart.data.labels = [0,years];
+	theChart.data.datasets.data = population;
+	theChart.update();
+}
 	
   document.getElementById("wawa").addEventListener("click", population_thingy);
 function population_thingy() {
@@ -95,9 +100,7 @@ var pop = [start_pop];
   		total += wa;
 	}
 console.log(typeof pop[0]);
-	theChart.data.labels = [0,years];
-	theChart.data.datasets.data = pop;
-	theChart.update();
+updateChart(years,pop,theChart
 document.getElementById("the").innerHTML = total.toFixed(2);
 }
 </script>
