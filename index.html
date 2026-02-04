@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <title>twoc population growth calculator</title>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
 <style>
 body {
 background-color: rgb(208, 164, 230);
@@ -49,7 +52,6 @@ align-items: center
 </div>
 <canvas id="Population_Chart" style="width:100%;max-width:600px"></canvas>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <script>
 
 const theChart = new Chart(document.getElementById("Population_Chart"), {
