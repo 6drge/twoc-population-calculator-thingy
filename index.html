@@ -56,13 +56,13 @@ align-items: center
 new Chart(Population_Chart, {
   type: "line",
   data: {
-    labels: [0,years],
+    labels: [0,20],
     datasets: [{
       fill: false,
       lineTension: 0,
       backgroundColor: "rgba(0,0,255,1.0)",
       borderColor: "rgba(0,0,255,1.0)",
-      data: pop
+      data: [0,500]
     }]
   },
   options: {
@@ -70,7 +70,7 @@ new Chart(Population_Chart, {
       legend: {display:false},
       title: {
         display: true,
-        text: "Population Growth cHART",
+        text: "Population Growth Chart",
         font: {size:24}
       }
     }
