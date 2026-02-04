@@ -60,8 +60,8 @@ var start_pop = Number(document.getElementById("start_pop").value);
 var bonus = Number(document.getElementById("bonus").value);
 var pop = [start_pop];
 	for (let i = 0; i < years; i++) {
-  		m= 1 - growth * Math.exp((-decay-(-bonus)) * years);
-    		let new_pop = pop[pop.length - 1]*m;
+  		m= 1 - growth * Math.exp(-decay * i);
+    		let new_pop = pop[pop.length - 1]*m+bonus;
     		pop.push(new_pop);
 	}
 	let total = 0
