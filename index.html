@@ -97,6 +97,7 @@ var pop = [start_pop];
 console.log(typeof pop[0]);
 	theChart.data.labels = [0,years];
 	theChart.data.datasets.data = pop;
+	theChart.update()
 document.getElementById("the").innerHTML = total.toFixed(2);
 }
 </script>
