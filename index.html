@@ -53,7 +53,7 @@ align-items: center
 
 <script>
 
-new Chart(Population_Chart, {
+let theChart = new Chart(Population_Chart, {
   type: "line",
   data: {
     labels: [0,20],
@@ -95,8 +95,8 @@ var pop = [start_pop];
   		total += wa;
 	}
 console.log(typeof pop[0]);
-	Chart.data.labels = [0,years];
-	Chart.data.datasets.data = pop;
+	theChart.data.labels = [0,years];
+	theChart.data.datasets.data = pop;
 document.getElementById("the").innerHTML = total.toFixed(2);
 }
 </script>
