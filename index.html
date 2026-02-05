@@ -106,6 +106,12 @@ var pop = [start_pop];
 	for (let i = 0; i < years; i++) {
   		m= 1 - growth * Math.exp(-decay * (i+bonus));
     		let new_pop = pop[pop.length - 1]*m+bonus+(random(-1,1)*i*growth);
+			if new_pop > 1000000000 {
+				new_pop *= random(0.01,0.07)
+			}
+			if new_pop > 1000000 {
+				new_pop *= random(0.1,0.7)
+			}
     		pop.push(new_pop);
 	}
 	let total = 0
