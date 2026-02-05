@@ -90,11 +90,13 @@ var growth = Number(document.getElementById("growth").value);
 var decay = Number(document.getElementById("decay").value);
 var start_pop = Number(document.getElementById("start_pop").value);
 var bonus = Number(document.getElementById("bonus").value);
+var years2 = [];
 var pop = [start_pop];
 	for (let i = 0; i < years; i++) {
   		m= 1 - growth * Math.exp(-decay * (i+bonus));
     		let new_pop = pop[pop.length - 1]*m+bonus+(Math.random()*i*growth);
     		pop.push(new_pop);
+		years2.push[i]
 	}
 	let total = 0
 	for (let wa of pop) {
