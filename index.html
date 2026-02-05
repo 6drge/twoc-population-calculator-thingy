@@ -78,9 +78,9 @@ const theChart = new Chart(document.getElementById("Population_Chart"), {
   }
 });
 function updateChart(years,population,chart) {
-	theChart.data.labels = [0,years];
-	theChart.data.datasets[0].data = population;
-	theChart.update();
+	chart.data.labels = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+	chart.data.datasets[0].data = population;
+	chart.update();
 }
 	
   document.getElementById("wawa").addEventListener("click", population_thingy);
