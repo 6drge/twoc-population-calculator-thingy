@@ -93,8 +93,8 @@ var bonus = Number(document.getElementById("bonus").value);
 var pop = [start_pop];
 	for (let i = 0; i < years; i++) {
   		m= 1 - growth * Math.exp(-decay * (i+bonus));
-    		let new_pop = [pop[pop.length - 1]*m+bonus+(Math.random()*i*growth)];
-    		pop.concat(new_pop);
+    		let new_pop = pop[pop.length - 1]*m+bonus+(Math.random()*i*growth);
+    		pop.push(new_pop);
 	}
 	let total = 0
 	for (let wa of pop) {
