@@ -82,6 +82,14 @@ function updateChart(years1,population,chart) {
 	chart.data.datasets[0].data = population;
 	chart.update();
 }
+
+function range(start, end) {
+  const result = [];
+  for (let i = start; i <= end; i++) {
+    result.push(i);
+  }
+  return result;
+}
 	
   document.getElementById("wawa").addEventListener("click", population_thingy);
 function population_thingy() {
@@ -90,7 +98,6 @@ var growth = Number(document.getElementById("growth").value);
 var decay = Number(document.getElementById("decay").value);
 var start_pop = Number(document.getElementById("start_pop").value);
 var bonus = Number(document.getElementById("bonus").value);
-var years2 = [];
 var pop = [start_pop];
 	for (let i = 0; i < years; i++) {
   		m= 1 - growth * Math.exp(-decay * (i+bonus));
@@ -103,7 +110,7 @@ var pop = [start_pop];
   		total += wa;
 	}
 console.log(typeof pop[0]);
-updateChart(years2,pop,theChart)
+updateChart(range(0,years),pop,theChart);
 document.getElementById("the").innerHTML = total.toFixed(2);
 }
 </script>
