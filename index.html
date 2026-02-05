@@ -79,7 +79,7 @@ const theChart = new Chart(document.getElementById("Population_Chart"), {
 });
 function updateChart(years,population,chart) {
 	theChart.data.labels = [0,years];
-	theChart.data.datasets.data = population;
+	theChart.data.datasets[0].data = population;
 	theChart.update();
 }
 	
