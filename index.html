@@ -90,6 +90,10 @@ function range(start, end) {
   }
   return result;
 }
+
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 	
   document.getElementById("wawa").addEventListener("click", population_thingy);
 function population_thingy() {
@@ -101,7 +105,7 @@ var bonus = Number(document.getElementById("bonus").value);
 var pop = [start_pop];
 	for (let i = 0; i < years; i++) {
   		m= 1 - growth * Math.exp(-decay * (i+bonus));
-    		let new_pop = pop[pop.length - 1]*m+bonus+(Math.random()*i*growth);
+    		let new_pop = pop[pop.length - 1]*m+bonus+(random(-1,1)*i*growth);
     		pop.push(new_pop);
 	}
 	let total = 0
